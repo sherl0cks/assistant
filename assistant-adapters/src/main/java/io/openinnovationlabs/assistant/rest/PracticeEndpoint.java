@@ -16,6 +16,7 @@
 package io.openinnovationlabs.assistant.rest;
 
 import io.openinnovationlabs.assistant.domain.pratice.Practice;
+import io.swagger.annotations.Api;
 import org.springframework.stereotype.Component;
 
 import javax.ws.rs.GET;
@@ -24,14 +25,16 @@ import javax.ws.rs.Produces;
 import java.util.ArrayList;
 import java.util.List;
 
-@Path("")
+// example of how to set this up to generate swagger documentation
+// https://github.com/swagger-api/swagger-samples/blob/master/java/java-jaxrs-cxf/src/main/java/io/swagger/sample/resource/PetResource.java
+@Api("/practices")
+@Path("/practices")
 @Component
 public class PracticeEndpoint {
 
     public PracticeEndpoint() {}
 
     @GET
-    @Path("/practices")
     @Produces("application/json")
     public List<Practice> getPractices() {
         Practice p = new Practice();

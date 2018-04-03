@@ -24,7 +24,19 @@
             <version>${project.parent.version}</version>
         </dependency>
 
-        <!-- Spring Boot Starters -->
+        <!-- deps added outside of starter -->
+        <dependency>
+            <groupId>org.apache.cxf</groupId>
+            <artifactId>cxf-rt-rs-service-description-swagger</artifactId>
+            <version>3.1.12</version>
+        </dependency>
+        <dependency>
+            <groupId>org.webjars</groupId>
+            <artifactId>swagger-ui</artifactId>
+            <version>3.13.0</version>
+        </dependency>
+
+        <!-- Spring Boot Starters from Launch Booster-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-tomcat</artifactId>
@@ -41,6 +53,7 @@
             <groupId>com.fasterxml.jackson.jaxrs</groupId>
             <artifactId>jackson-jaxrs-json-provider</artifactId>
         </dependency>
+
 
         <!-- Testing -->
         <dependency>

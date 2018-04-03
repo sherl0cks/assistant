@@ -34,10 +34,7 @@ To run the app locally after building it:
 [assistant-adapters]$ mvn spring-boot:run
 ```
 
-
-
-It should deploy to `http://localhost:8080`. TODO: have swagger UI instructions here.
-
+The app will deploy to [http://localhost:8080](http://localhost:8080), which will redirect you to the embedded [Swagger UI](https://swagger.io/swagger-ui/).
 
 
 ## OpenShift Usage: Sandbox

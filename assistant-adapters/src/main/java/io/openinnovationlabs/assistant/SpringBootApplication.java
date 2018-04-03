@@ -16,6 +16,8 @@
 package io.openinnovationlabs.assistant;
 
 import com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider;
+import org.apache.cxf.jaxrs.swagger.Swagger2Feature;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.context.annotation.Bean;
 
@@ -29,5 +31,17 @@ public class SpringBootApplication {
     @Bean
     public JacksonJsonProvider jsonProvider() {
         return new JacksonJsonProvider();
+    }
+
+
+
+    public Swagger2Feature openApiFeature(){
+        Swagger2Feature swagger2Feature = new Swagger2Feature();
+
+        // customize some of the properties
+        swagger2Feature.setBasePath("/api");
+
+
+        return swagger2Feature;
     }
 }
