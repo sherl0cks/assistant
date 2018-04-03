@@ -23,11 +23,11 @@
 
   <artifactId>assistant</artifactId>
 
-  <groupId>org.rhc.labs</groupId>
+  <groupId>io.openinnovationlabs</groupId>
   <version>1.0.0-SNAPSHOT</version>
 
-  <name>Spring Boot - HTTP Booster</name>
-  <description>Spring Boot - HTTP Booster</description>
+  <name>Open Innovation Labs - Assistant</name>
+  <description>Open Innovation Labs - Assistant</description>
 
   <dependencies>
     <!-- Spring Boot Starters -->

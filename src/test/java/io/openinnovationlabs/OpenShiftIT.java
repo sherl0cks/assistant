@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package io.openshift.booster;
+package io.openinnovationlabs;
 
 import com.jayway.restassured.RestAssured;
-import io.openshift.booster.service.GreetingProperties;
+import io.openinnovationlabs.service.GreetingProperties;
 import org.arquillian.cube.openshift.impl.enricher.RouteURL;
 import org.jboss.arquillian.junit.Arquillian;
 import org.junit.Before;
