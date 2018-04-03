@@ -4,12 +4,22 @@ The goal of this project to practice Domain Driven Design concepts with a use ca
 
 Apart from giving us a use case to build an app for, here is how the Assistant could help Labs practitioners (phrased in terms of Impact Mapping, and prioritized in order how we would build the features):
 
-1) Reduce the amount of time required for practitioners to discover a practice that is useful for their residency by providing tailored recommendations based on the answer to a few simple questions. The [Practice Library](https://rht-labs.github.io/practice-library/) is going to continue to grow in size, as it should. A simple mechanism to quickly direct practitioners to the right practice is in order (note an alternate implementation could include tailored navigation in the library itself, just remember we are manufacturing a use case to write code).
+1) Reduce the amount of time required for practitioners to discover a practice that is useful for their residency by providing tailored recommendations based on the answer to a few simple questions.  
 2) Reduce the amount of energy to build a schedule for week 1 of a residency by building an agenda based on a few simple questions, as well as the agendas used by previous team members.
+
+## Practice Library
+
+We should expect the [Practice Library](https://rht-labs.github.io/practice-library/)  to continue to grow in size, as it should. Thus, a simple mechanism to quickly direct practitioners to the right practice is in order. One way to do that is tailored navigation in the library itself, but we're taking this approach for now as we need a use case to write Java code against. This idea does not eliminate the option to add better navigation to the practice library.
+
 
 
 ## Local Usage
 
+Prerequsites:
+
+* JDK 8
+* A modern maven 3.x 
+*  IDE like eclipse or intellij
 
 To run the app locally:
 
