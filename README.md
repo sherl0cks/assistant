@@ -19,11 +19,21 @@ Prerequsites:
 
 * JDK 8
 * A modern maven 3.x 
-*  IDE like eclipse or intellij
+* IDE like eclipse or intellij
 
-To run the app locally:
+To build the app locally:
 
-`[assistant]$ mvn spring-boot:run`
+``` 
+[assistant]$ mvn clean install
+```
+
+To run the app locally after building it:
+
+```
+[assistant]$ cd assistant-adapters
+[assistant-adapters]$ mvn spring-boot:run
+```
+
 
 
 It should deploy to `http://localhost:8080`. TODO: have swagger UI instructions here.
