@@ -1,4 +1,4 @@
-package io.openinnovationlabs.assistant.assistant.domain.pratice;
+package io.openinnovationlabs.assistant.domain.pratice;
 
 public class Practice {
 

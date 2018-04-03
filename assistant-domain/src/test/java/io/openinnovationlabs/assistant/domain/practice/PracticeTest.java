@@ -1,13 +1,13 @@
-package io.openinnovationlabs.assistant.assistant.domain.practice;
+package io.openinnovationlabs.assistant.domain.practice;
 
-import io.openinnovationlabs.assistant.assistant.domain.pratice.Practice;
+import io.openinnovationlabs.assistant.domain.pratice.Practice;
 import org.junit.Assert;
 import org.junit.Test;
 
 public class PracticeTest {
 
     @Test
-    public void shouldTestCreateAPracitce(){
+    public void shouldTestCreateAPractice(){
 
         // given
         Practice p = new Practice();

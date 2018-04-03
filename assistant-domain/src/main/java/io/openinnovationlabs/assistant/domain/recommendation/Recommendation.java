@@ -1,4 +1,4 @@
-package io.openinnovationlabs.assistant.assistant.domain.recommendation;
+package io.openinnovationlabs.assistant.domain.recommendation;
 
 public class Recommendation {
 

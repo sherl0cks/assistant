@@ -15,7 +15,7 @@
  */
 package io.openinnovationlabs.assistant.rest;
 
-import io.openinnovationlabs.assistant.assistant.domain.pratice.Practice;
+import io.openinnovationlabs.assistant.domain.pratice.Practice;
 import org.springframework.stereotype.Component;
 
 import javax.ws.rs.GET;
