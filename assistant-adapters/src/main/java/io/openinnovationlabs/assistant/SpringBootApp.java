@@ -17,15 +17,15 @@ package io.openinnovationlabs.assistant;
 
 import com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider;
 import org.apache.cxf.jaxrs.swagger.Swagger2Feature;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
-@org.springframework.boot.autoconfigure.SpringBootApplication
-public class SpringBootApplication {
+@SpringBootApplication
+public class SpringBootApp {
 
     public static void main(String[] args) {
-        SpringApplication.run(SpringBootApplication.class, args);
+        SpringApplication.run(SpringBootApp.class, args);
     }
 
     @Bean
@@ -34,8 +34,7 @@ public class SpringBootApplication {
     }
 
 
-
-    public Swagger2Feature openApiFeature(){
+    public Swagger2Feature openApiFeature() {
         Swagger2Feature swagger2Feature = new Swagger2Feature();
 
         // customize some of the properties

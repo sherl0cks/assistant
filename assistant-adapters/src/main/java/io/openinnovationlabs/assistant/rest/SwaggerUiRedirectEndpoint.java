@@ -13,7 +13,7 @@ import java.net.URISyntaxException;
 public class SwaggerUiRedirectEndpoint {
 
     @GET
-    public void redirect() throws URISyntaxException {
-        Response.seeOther(new URI("/api-docs?url=/swagger.json"));
+    public Response redirect() throws URISyntaxException {
+        return Response.seeOther(new URI("/api-docs?url=/swagger.json")).build();
     }
 }

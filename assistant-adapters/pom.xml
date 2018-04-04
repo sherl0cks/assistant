@@ -14,6 +14,11 @@
     <name>Adapters</name>
     <description>Open Innovation Labs :: Assistant :: Adapters</description>
 
+    <properties>
+        <!-- The main class to start by executing java -jar -->
+        <start-class>io.openinnovationlabs.assistant.SpringBootApp</start-class>
+    </properties>
+
 
     <dependencies>
 
@@ -98,23 +103,28 @@
     </dependencies>
 
 
-    <profiles>
-        <profile>
-            <id>openshift-it</id>
-            <build>
-                <plugins>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-failsafe-plugin</artifactId>
-                        <configuration>
-                            <systemPropertyVariables>
-                                <app.name>${project.artifactId}</app.name>
-                            </systemPropertyVariables>
-                        </configuration>
-                    </plugin>
-                </plugins>
-            </build>
-            <activation/>
-        </profile>
-    </profiles>
+
+    <!-- https://stackoverflow.com/questions/1771561/maven-is-it-possible-to-override-the-configuration-of-a-plugin-already-defined -->
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-maven-plugin</artifactId>
+                    <version>${spring-boot.version}</version>
+                    <executions>
+                        <execution>
+                            <goals>
+                                <goal>repackage</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                    <configuration combine.self="override">
+                        <mainClass>${start-class}</mainClass>
+                        <classifier></classifier>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
 </project>

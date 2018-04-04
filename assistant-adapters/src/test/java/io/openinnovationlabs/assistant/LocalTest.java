@@ -34,7 +34,7 @@ public class LocalTest {
 
     @Before
     public void beforeTest() {
-        RestAssured.baseURI = String.format("http://localhost:%d/api/practices", port);
+        RestAssured.baseURI = String.format("http://localhost:%d/practices", port);
     }
 
     @Test

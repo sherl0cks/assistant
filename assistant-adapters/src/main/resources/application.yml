@@ -3,3 +3,6 @@ cxf:
   jaxrs:
     component-scan: true
     classes-scan-packages: org.apache.cxf.jaxrs.swagger
+management:
+  context-path: /actuator
+  port: 8081

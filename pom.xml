@@ -35,19 +35,5 @@
     <module>assistant-adapters</module>
   </modules>
 
-  <!-- override booster parent pom TODO, perhaps change parent pom -->
-  <build>
-    <plugins>
-      <plugin>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-maven-plugin</artifactId>
-        <executions>
-          <execution>
-            <phase>none</phase>
-          </execution>
-        </executions>
-      </plugin>
-    </plugins>
-  </build>
 
 </project>
