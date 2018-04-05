@@ -1,18 +1,23 @@
 package io.openinnovationlabs.assistant.domain.objective;
 
+import org.junit.Assert;
 import org.junit.Test;
+
+import java.util.List;
 
 public class ObjectiveTest {
 
-    // code samples if you need https://github.com/VaughnVernon/IDDD_Samples
+
     @Test
-    public void shouldSelectAnObjectiveFromAList(){
+    public void shouldSuccesfullyCreateStubbedRepository() {
 
-        // given a list of objectives
+        // given
+        ObjectiveRepository repository = new StubbedObjectiveRepository();
 
-        // when a user selects the "Design an Application" Objective
-        // i.e. creates a command to select the objective
+        // when
+        List<Objective> objectives = repository.allObjectives();
 
-        // then publish an event that the objective was successfully selected
+        // then
+        Assert.assertEquals(3, objectives.size());
     }
 }

@@ -36,11 +36,6 @@ public class SpringBootApp {
 
     public Swagger2Feature openApiFeature() {
         Swagger2Feature swagger2Feature = new Swagger2Feature();
-
-        // customize some of the properties
-        swagger2Feature.setBasePath("/api");
-
-
         return swagger2Feature;
     }
 }
