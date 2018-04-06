@@ -13,34 +13,25 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package io.openinnovationlabs.assistant;
+package io.openinnovationlabs.assistant.adapters.rest;
 
 import com.jayway.restassured.RestAssured;
 import org.junit.Before;
-import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import static com.jayway.restassured.RestAssured.when;
-
 @RunWith(SpringRunner.class)
-@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-public class LocalTest {
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT, classes = io.openinnovationlabs.assistant.application.SpringBootApp.class)
+public class LocalRestApiTests extends SharedRestApiTestCases {
 
     @Value("${local.server.port}")
     private int port;
 
     @Before
     public void beforeTest() {
-        RestAssured.baseURI = String.format("http://localhost:%d/practices", port);
+        RestAssured.baseURI = String.format("http://localhost:%d", port);
     }
 
-    @Test
-    public void shouldReturnAListOfPractices() {
-        when().get()
-                .then()
-                .statusCode(200);
-    }
 }

@@ -32,7 +32,7 @@
 
   <modules>
     <module>assistant-domain</module>
-    <module>assistant-adapters</module>
+    <module>assistant-application</module>
   </modules>
 
 

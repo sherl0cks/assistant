@@ -5,7 +5,7 @@ package io.openinnovationlabs.assistant.domain.objective;
  */
 public class Objective {
 
-    private String id;
+    protected String id;
     private String name;
 
     public Objective(String name) {
@@ -16,7 +16,7 @@ public class Objective {
         return id;
     }
 
-    public void setId(String id) {
+    protected void setId(String id) {
         this.id = id;
     }
 
@@ -24,9 +24,6 @@ public class Objective {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
 
     @Override
     public boolean equals(Object o) {
@@ -35,22 +32,19 @@ public class Objective {
 
         Objective objective = (Objective) o;
 
-        if (id != null ? !id.equals(objective.id) : objective.id != null) return false;
         return name != null ? name.equals(objective.name) : objective.name == null;
     }
 
     @Override
     public int hashCode() {
-        int result = id != null ? id.hashCode() : 0;
-        result = 31 * result + (name != null ? name.hashCode() : 0);
-        return result;
+        return name != null ? name.hashCode() : 0;
     }
 
     @Override
     public String toString() {
         return "Objective{" +
-                "id='" + id + '\'' +
-                ", name='" + name + '\'' +
+                "name='" + name + '\'' +
+                ", id='" + id + '\'' +
                 '}';
     }
 }

@@ -47,9 +47,21 @@ To run the app in your personal sandbox project in OpenShift.
 [assistant]$ mvn clean fabric8:deploy -Popenshift
 ```
 
+You can also run the integration tests that will deploy to your current OpenShift project
+
+```
+[assistant]$ oc login 
+[assistant]$ mvn clean verify -Popenshift,openshift-it
+
+```
+
 ## OpenShift Usage: Pipeline
 
 TODO: provide info on applier
+
+## IDE Setup
+
+To enable Hot Swap when using `spring-boot:run`, see [this thread](https://stackoverflow.com/questions/23155244/spring-boot-hotswap-with-intellij-ide).
 
 ## More Information
 You can learn more about this booster and rest of the Spring Boot runtime in the link:http://appdev.openshift.io/docs/spring-boot-runtime.html[Spring Boot Runtime Guide].

@@ -1,15 +1,16 @@
 package io.openinnovationlabs.assistant.domain.objective;
 
-import org.junit.Assert;
 import org.junit.Test;
 
 import java.util.List;
+
+import static org.junit.Assert.*;
 
 public class ObjectiveTest {
 
 
     @Test
-    public void shouldSuccesfullyCreateStubbedRepository() {
+    public void shouldSuccessfullyCreateStubbedRepository() {
 
         // given
         ObjectiveRepository repository = new StubbedObjectiveRepository();
@@ -18,6 +19,6 @@ public class ObjectiveTest {
         List<Objective> objectives = repository.allObjectives();
 
         // then
-        Assert.assertEquals(3, objectives.size());
+        assertEquals(3, objectives.size());
     }
 }

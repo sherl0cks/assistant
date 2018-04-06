@@ -1,4 +1,4 @@
-package io.openinnovationlabs.assistant.rest;
+package io.openinnovationlabs.assistant.adapters.rest;
 
 import io.openinnovationlabs.assistant.domain.objective.Objective;
 import io.swagger.annotations.Api;
@@ -10,7 +10,7 @@ import java.util.List;
 
 @Api("/objectives")
 @Path("/objectives")
-public interface ObjectiveEndpointSpecification {
+public interface ObjectiveApiSpecification {
 
     @GET
     @Produces("application/json")

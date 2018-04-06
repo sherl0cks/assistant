@@ -1,4 +1,4 @@
-package io.openinnovationlabs.assistant.rest;
+package io.openinnovationlabs.assistant.adapters.rest;
 
 import org.springframework.stereotype.Component;
 

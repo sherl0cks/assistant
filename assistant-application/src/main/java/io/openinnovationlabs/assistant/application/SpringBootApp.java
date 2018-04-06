@@ -1,44 +1,31 @@
 /*
  * Copyright 2016-2017 Red Hat, Inc, and individual contributors.
- *
+ * <p>
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
- *
+ * <p>
  * http://www.apache.org/licenses/LICENSE-2.0
- *
+ * <p>
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+package io.openinnovationlabs.assistant.application;
 
-package io.openinnovationlabs.assistant;
+import org.apache.cxf.jaxrs.swagger.Swagger2Feature;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
 
-import com.jayway.restassured.RestAssured;
-import org.arquillian.cube.openshift.impl.enricher.RouteURL;
-import org.jboss.arquillian.junit.Arquillian;
-import org.junit.Before;
-import org.junit.Test;
-import org.junit.runner.RunWith;
+@SpringBootApplication
+@ComponentScan(basePackages = {"io.openinnovationlabs.assistant"})
+public class SpringBootApp {
 
-import java.net.URL;
-
-// TODO make this work
-@RunWith(Arquillian.class)
-public class OpenShiftIT  {
-
-	@RouteURL("${app.name}")
-    private URL baseURL;
-
-    @Before
-    public void setup() throws Exception {
-        RestAssured.baseURI = baseURL + "api/greeting";
+    public static void main(String[] args) {
+        SpringApplication.run(SpringBootApp.class, args);
     }
 
-    @Test
-    public  void shouldSayHi(){
-        // test
-    }
 }

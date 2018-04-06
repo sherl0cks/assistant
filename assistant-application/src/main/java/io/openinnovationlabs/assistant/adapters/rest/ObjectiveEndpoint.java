@@ -1,16 +1,17 @@
-package io.openinnovationlabs.assistant.rest;
+package io.openinnovationlabs.assistant.adapters.rest;
 
 import io.openinnovationlabs.assistant.domain.objective.Objective;
 import io.openinnovationlabs.assistant.domain.objective.ObjectiveRepository;
-import io.openinnovationlabs.assistant.domain.objective.StubbedObjectiveRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
 
 @Component
-public class ObjectiveEndpoint implements ObjectiveEndpointSpecification {
+public class ObjectiveEndpoint implements ObjectiveApiSpecification {
 
-    private ObjectiveRepository repository = new StubbedObjectiveRepository();
+    @Autowired
+    private ObjectiveRepository repository;
 
     @Override
     public List<Objective> getObjectives() {
