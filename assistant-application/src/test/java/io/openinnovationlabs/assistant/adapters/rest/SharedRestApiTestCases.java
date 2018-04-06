@@ -36,14 +36,4 @@ public class SharedRestApiTestCases {
                         )
                 );
     }
-
-    // for some reason works in Intellij but not mvn clean install
-    @Ignore
-    @Test
-    public void shouldReturnSwaggerUi() {
-        when().
-                get("").
-                then().
-                statusCode(200).header("content-type", "text/html");
-    }
 }
