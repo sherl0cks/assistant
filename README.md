@@ -12,7 +12,6 @@ Apart from giving us a use case to build an app for, here is how the Assistant c
 We should expect the [Practice Library](https://rht-labs.github.io/practice-library/)  to continue to grow in size, as it should. Thus, a simple mechanism to quickly direct practitioners to the right practice is in order. One way to do that is tailored navigation in the library itself, but we're taking this approach for now as we need a use case to write Java code against. This idea does not eliminate the option to add better navigation to the practice library.
 
 
-
 ## Local Usage
 
 Prerequsites:
@@ -62,6 +61,16 @@ TODO: provide info on applier
 ## IDE Setup
 
 To enable Hot Swap when using `spring-boot:run`, see [this thread](https://stackoverflow.com/questions/23155244/spring-boot-hotswap-with-intellij-ide).
+
+## Stuff Not In The Original Booster
+
+This is [the original booster](https://github.com/snowdrop/spring-boot-http-booster), provisioned via [http://launch.openshift.io](http://launch.openshift.io).
+
+- CORS filter
+- Swagger UI
+- Swagger Spec gen (there is an option to make this the new v3 OpenAPI Spec if preferred)
+- maven multimodule support
+- doc fixes
 
 ## More Information
 You can learn more about this booster and rest of the Spring Boot runtime in the link:http://appdev.openshift.io/docs/spring-boot-runtime.html[Spring Boot Runtime Guide].
