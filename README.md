@@ -70,7 +70,8 @@ This is [the original booster](https://github.com/snowdrop/spring-boot-http-boos
 - Swagger UI
 - Swagger Spec gen (there is an option to make this the new v3 OpenAPI Spec if preferred)
 - maven multimodule support
-- doc fixes
+- [doc fixes](https://github.com/snowdrop/spring-boot-http-booster/issues/74)
+- [spring boot parent pom stupidity fixes](https://github.com/snowdrop/spring-boot-booster-parent/issues/7)
 
 ## More Information
 You can learn more about this booster and rest of the Spring Boot runtime in the link:http://appdev.openshift.io/docs/spring-boot-runtime.html[Spring Boot Runtime Guide].
