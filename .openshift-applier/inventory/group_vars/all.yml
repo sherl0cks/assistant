@@ -1,0 +1,26 @@
+---
+openshift_cluster_content:
+- object: app-builds
+  content:
+  - name: assistant-build
+    template: "{{ playbook_dir }}/openshift-templates/s2i-app-build/template-no-secrets.yaml"
+    params: "{{ playbook_dir }}/params/java-app/build"
+    namespace: "{{ ci_cd_namespace }}"
+    tags:
+    - build
+- object: dev-stage
+  content:
+  - name: assistant-deploy
+    template: "{{ playbook_dir }}/openshift-templates/automation-api-hsql/template.json"
+    params: "{{ playbook_dir }}/params/java-app/deploy_dev"
+    namespace: "{{ dev_namespace }}"
+    tags:
+    - dev
+- object: test-stage
+  content:
+  - name: assistant-deploy
+    template: "{{ playbook_dir }}/openshift-templates/automation-api-hsql/template.json"
+    params: "{{ playbook_dir }}/params/java-app/deploy_demo"
+    namespace: labs-demo
+    tags:
+    - test
